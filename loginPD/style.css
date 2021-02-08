@@ -1,0 +1,95 @@
+@font-face {
+    font-family: montserrat;
+    src: url(Montserrat-Medium.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-size: 20px;
+    font-family: montserrat;
+    
+}
+form{
+    margin:20px auto;
+    display:grid;
+    width:300px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4px;
+}
+form *{
+    grid-column: span 2;
+    padding:5px 10px;
+    border-color: white;
+    background-image: linear-gradient(to right,#eee, #ddd);
+    border-radius: 4px;
+}
+#imageContainer {
+    padding: 0;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    margin: 10px auto;
+    box-sizing: content-box;
+    position: relative;
+    background-image: none;
+    /* border:1px solid black; */
+}
+#imageContainer *{
+    width:100px;
+    height:100px;
+    padding:0;
+    border-radius: 50%;
+    border:none;
+    transition: .1s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.delett{
+    font-size: 50px;
+    padding:14px 30px;
+    text-decoration: none;
+    opacity: 0;
+    outline: none;
+    /* background-color: black; */
+    color:black;
+    background:none;
+    box-shadow: none;
+}
+#imageContainer:hover .uImg{
+    opacity: 0.3;
+    cursor: pointer;
+}
+#imageContainer:hover .delett{
+    opacity: 1;
+    background-image: none;
+    cursor: pointer;
+}
+input{
+    border: 2px solid #eee;
+    box-shadow: 2px 2px 4px rgba(56, 22, 0, 0.342);
+}
+p{
+    text-align: center;
+}
+form p{
+    display: none;
+    color:rgb(35, 149, 255);
+    padding:0;
+    background: none;
+    font-size:12px;
+}
+input[type=submit]{
+    grid-column: span 1;
+}
+input[type=submit]:hover{
+    background-image: linear-gradient(to right,#fff, #eee);
+    cursor: pointer;
+}
+input[type=submit]:disabled:hover{
+    background-image: linear-gradient(to right,#eee, #ddd);
+    cursor: default;
+}
